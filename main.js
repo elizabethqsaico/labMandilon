@@ -48,16 +48,18 @@ function submitFormStore(event){
 	listStoreEmployee.push(_store);
 	listCityStore.push(_city);
 	var sales = 0;
+	var resultEmployee = 0;
 	var listReportEmployee = document.getElementById("report_employee");
 	var listReportStore = document.getElementById("report_store");
 	var listReportCity = document.getElementById("report_city");
-	if(listEmployeeSale.length > 0 ){
+			if(listEmployeeSale.length > 0 ){
 		listReportEmployee.innerHTML = ' ';
-	}
+		}
 	for(var i = 0; i < listEmployeeSale.length; i++)
 	{
 		sales += parseFloat(listEmployeeSale[i].sale);
 		listReportEmployee.innerHTML += '<li>'+  listEmployeeSale[i].name + ' ' + listEmployeeSale[i].sale + '</li>';
+
 		if(listStoreEmployee.length > 0 ){
 		listReportStore.innerHTML = ' ';
 		}
