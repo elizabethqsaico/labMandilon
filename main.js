@@ -66,11 +66,13 @@ function submitFormStore(event){
 		if(listCityStore.length > 0 ){
 		listReportCity.innerHTML = ' ';
 		}
-		for(var y=0; x < listCityStore.length; x++){
-			listReportStore.innerHTML += '<li>'+  listStoreEmployee[x].name + ' ' + listStoreEmployee[x].employee.sale + '</li>';
+		for(var y=0; y < listCityStore.length; y++){
+			listReportCity.innerHTML += '<li>'+  listCityStore[y].name + ' ' + listCityStore[y].store.employee.sale + '</li>';
 		}
 		}
 	}
+	var reportSales = document.getElementById("monto_total");
+	reportSales.innerHTML = sales;
 	event.preventDefault();
 	return;
 }
